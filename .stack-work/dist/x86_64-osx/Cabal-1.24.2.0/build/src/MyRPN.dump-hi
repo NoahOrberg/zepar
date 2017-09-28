@@ -1,0 +1,206 @@
+
+==================== FINAL INTERFACE ====================
+2017-09-28 14:35:32.572118 UTC
+
+interface zepar-0.1.0.0-9qHRIZSu9HWEpMODzgWLlh:MyRPN 8002
+  interface hash: e0aa40a5f544bad3fceb1d9072813e1d
+  ABI hash: d82e666db3db45eafe515e21bb5a43cf
+  export-list hash: 2b1c8d1fc07a07d0f41026a242d48fc9
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  MyRPN.eval
+  MyRPN.parse
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+602f9987668ac0877d3894f6feca00b0
+  $fEqExp :: GHC.Classes.Eq MyRPN.Exp
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ MyRPN.Exp MyRPN.$fEqExp_$c== MyRPN.$fEqExp_$c/= -}
+602f9987668ac0877d3894f6feca00b0
+  $fEqExp_$c/= :: MyRPN.Exp -> MyRPN.Exp -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: MyRPN.Exp) (b :: MyRPN.Exp) ->
+                 case MyRPN.$fEqExp_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+602f9987668ac0877d3894f6feca00b0
+  $fEqExp_$c== :: MyRPN.Exp -> MyRPN.Exp -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+602f9987668ac0877d3894f6feca00b0
+  $fShowExp :: GHC.Show.Show MyRPN.Exp
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ MyRPN.Exp
+                  MyRPN.$fShowExp_$cshowsPrec
+                  MyRPN.$fShowExp_$cshow
+                  MyRPN.$fShowExp_$cshowList -}
+602f9987668ac0877d3894f6feca00b0
+  $fShowExp1 :: MyRPN.Exp -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: MyRPN.Exp) (w1 :: GHC.Base.String) ->
+                 MyRPN.$w$cshowsPrec 0# w w1) -}
+602f9987668ac0877d3894f6feca00b0
+  $fShowExp_$cshow :: MyRPN.Exp -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: MyRPN.Exp) ->
+                 MyRPN.$fShowExp_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+602f9987668ac0877d3894f6feca00b0
+  $fShowExp_$cshowList :: [MyRPN.Exp] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__ @ MyRPN.Exp MyRPN.$fShowExp1) -}
+602f9987668ac0877d3894f6feca00b0
+  $fShowExp_$cshowsPrec ::
+    GHC.Types.Int -> MyRPN.Exp -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: MyRPN.Exp)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 MyRPN.$w$cshowsPrec ww1 w1 w2 }) -}
+b8c6600ed7d63142dd565ad7d8d96992
+  $tc'Div :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10831968491344591262##
+                   13728901505553551760##
+                   MyRPN.$trModule
+                   MyRPN.$tc'Div1) -}
+d98cd9b668d7b0968f85e20cea149638
+  $tc'Div1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Div"#) -}
+df83e7ce6582d1b3b4837120f6719b2c
+  $tc'Mul :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14281835205261751397##
+                   14757419775685686419##
+                   MyRPN.$trModule
+                   MyRPN.$tc'Mul1) -}
+952094e03b95bacc41b30471a90de055
+  $tc'Mul1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Mul"#) -}
+7d15a375ff22a25c7e220e0e703eefe5
+  $tc'Num :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9243130501753188733##
+                   4068443104604339689##
+                   MyRPN.$trModule
+                   MyRPN.$tc'Num1) -}
+d0b0621991f7b4ea2992fb357b9ce71e
+  $tc'Num1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Num"#) -}
+1e5a11586ef20bb7786e8997c2091c41
+  $tc'Plus :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8998986360953017550##
+                   15727211075746078470##
+                   MyRPN.$trModule
+                   MyRPN.$tc'Plus1) -}
+d5a30c5ce895789490caae8702919ab9
+  $tc'Plus1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Plus"#) -}
+15201af2e8b90a5bb7260e1b8c1b02a0
+  $tc'Sub :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10306199344997810030##
+                   12547874633444034419##
+                   MyRPN.$trModule
+                   MyRPN.$tc'Sub1) -}
+5efb3c0059a06ff24ddba1e309dafba4
+  $tc'Sub1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Sub"#) -}
+d08a9ed41b3468bc6e911642a7df5ddc
+  $tcExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11980725718688256173##
+                   7473740522506122202##
+                   MyRPN.$trModule
+                   MyRPN.$tcExp1) -}
+22fbf1971e60b0eb949f68db846a0a6e
+  $tcExp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Exp"#) -}
+92b25edb6d68cea5fc34aa78789c8852
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module MyRPN.$trModule2 MyRPN.$trModule1) -}
+b3ec257b6ae1559b28c74496834c605f
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MyRPN"#) -}
+06ac0815228bd33aa30addc8d66ff0a1
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "zepar-0.1.0.0-9qHRIZSu9HWEpMODzgWLlh"#) -}
+602f9987668ac0877d3894f6feca00b0
+  $w$cshowsPrec ::
+    GHC.Prim.Int# -> MyRPN.Exp -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0] -}
+602f9987668ac0877d3894f6feca00b0
+  data Exp
+    = Num GHC.Types.Int
+    | Plus MyRPN.Exp MyRPN.Exp
+    | Sub MyRPN.Exp MyRPN.Exp
+    | Mul MyRPN.Exp MyRPN.Exp
+    | Div MyRPN.Exp MyRPN.Exp
+99d598ec7e58f28422f6b57bd873c66d
+  eval :: MyRPN.Exp -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U> -}
+8a7e8336d2cc14ee271c0b6acd20b0d0
+  parse :: [GHC.Base.String] -> MyRPN.Exp
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (exp :: [GHC.Base.String]) ->
+                 MyRPN.parse_iParse exp (GHC.Types.[] @ MyRPN.Exp)) -}
+14656e91acdf0fb2644f05d54d0d8d81
+  parse_iParse :: [[GHC.Types.Char]] -> [MyRPN.Exp] -> MyRPN.Exp
+  {- Arity: 2, Strictness: <S,1*U><L,U> -}
+instance [safe] GHC.Classes.Eq [MyRPN.Exp] = MyRPN.$fEqExp
+instance [safe] GHC.Show.Show [MyRPN.Exp] = MyRPN.$fShowExp
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
